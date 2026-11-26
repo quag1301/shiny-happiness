@@ -23,7 +23,7 @@ node render.js stills 5,60,133
 node render.js thumb
 node render.js video 30
 python3 make_audio.py out/timing.json out/audio.wav
-ffmpeg -y -i out/video_noaudio.mp4 -i out/audio.wav -c:v copy -c:a aac -b:a 192k -shortest out/FINAL_ceos_who_came_back.mp4
+ffmpeg -y -i out/video_noaudio.mp4 -i out/audio.wav -c:v copy -af "loudnorm=I=-15:TP=-1.5:LRA=11" -ar 48000 -c:a aac -b:a 192k -shortest out/FINAL_ceos_who_came_back.mp4
 ```
 - **Change a fact:** edit `cards.json` and re-render. Every field is plain text.
 - **Change the pace:** edit `D` (seconds per card) at the top of the `<script>` in `scene.html`.
