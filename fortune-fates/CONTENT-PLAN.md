@@ -32,7 +32,7 @@ No one can guarantee a video goes viral. A new channel has no history, so YouTub
 2. **Fate:** every entry has a story arc: rise, fall, caught, fired, comeback, or broke.
 3. **Number:** every card has a hard **$ figure or time figure** (before → after).
 4. **Timing:** it's tied to news from the last 1–3 days, or to a yearly search spike (Black Friday, tax season, year-end).
-5. **"Who's missing?":** the list has 10+ entries and people will argue about what was left out. That drives comments and gives you Part 2.
+5. **"Who's missing?":** the list has **30+ entries** (their top videos have 30–60) and people will argue about what was left out. That drives comments and gives you Part 2.
 
 ### Step 2: Title templates
 - `From [Famous A] to [Famous B]: [Group] Who [Fate]`
@@ -45,27 +45,39 @@ No one can guarantee a video goes viral. A new channel has no history, so YouTub
 
 ### Step 3: Thumbnail formula (see `/thumbnails`)
 - 4 cards in a row, each with photo, name bar, short reason and **one huge number**.
-- **The last card is highlighted** with a yellow border. It holds the newest story or the most shocking number.
+- Use **the first and last cards of the video**, as they do. Highlight the newest story or most shocking number with a yellow border.
 - Use one curiosity device per thumbnail: a "?" card, a "+31%" chip, a red "BANKRUPT" stamp, or green/red numbers.
 - If faces aren't famous (lottery winners), use silhouettes and let the **money number** be the hook.
 - Test at phone size: if you can't read the number at 1/4 size, make it bigger.
 
-### Step 4: Video structure (4–6 minutes at first, 8+ minutes later)
+### Step 4: Video structure (copied from what So Sánh Nhanh actually does, from frame-by-frame storyboards of their top 5)
 | Time | What happens |
 |---|---|
-| 0:00–0:05 | **Hook:** flash the last, most shocking card for 1 second, plus one line: "Number 1 lost $113 billion in 48 hours." |
-| 0:05–0:15 | One sentence of context (why now: "Nvidia just brought back its CEO…") |
-| Cards | Order them **from least to most shocking**, 8–15 seconds each, with year, name, fate line and the number animating up |
-| Last card | The news hook or biggest number. This is the payoff you promised in the hook. |
-| End | "Who did I miss? Comment below → Part 2", then an end screen pointing to a related video |
+| **0:00** | **No intro, no title screen, no talking.** The first card pops onto a plain background at second 0. |
+| 0:00–0:08 | Cards appear one at a time until 3 fill the screen. Then the whole row **scrolls sideways at a steady speed**. |
+| **Card #1** | **The news hook / the name in the title.** In "RIP Jayden Adams", Jayden Adams is card #1. In "Tragic deaths, Part 1", Diogo Jota (died the day before upload) is card #3. The title's promise is paid off immediately. |
+| Middle | **30–60 cards**, one every **3–5 seconds**. Each card stays on screen ~10 seconds as it travels across, enough time to read. A long list keeps people watching to see whether "their" person is in it. |
+| Order | Usually a **timeline** (oldest → newest; the jail video runs 2011 → 2026), so the **newest, hottest story is the last card**. |
+| **Last 10–12 s** | The scroll **stops and holds on the final 3 cards**. This is where the YouTube end screen goes. |
+| Title | "From **[an early card]** to **[the last card]**" (e.g. "From Khá Bảnh to Huấn Hoa Hồng"). The title literally describes the start and end of the video. |
+| Thumbnail | Real cards from the video: the first card(s) + the last card(s). On the #1 video, the thumbnail **is** the final frame, so the viewer must watch to the end to see it. |
 
-- **8:00 minutes and up** turns on ads in the middle of the video, which is the biggest earnings lever. Move there once viewers watch at least 40% of a 5-minute video.
-- Add your own value so YouTube doesn't treat the videos as reused content: a short voiceover or on-screen narration line per card, and a sources list in the description.
+**Card anatomy (their newer 2026 template):** photo (B&W for deaths, color for jail) → year badge top-left, occupation tag ("YouTuber", "Minister", "KOL") bottom-right, flag and club logo → name bar → one-line reason → **two icons** (cause + jail/tombstone) → **one big number** (age, years in prison, or "death penalty"/"life"). The icons let people follow without reading, which helps for a world audience.
+
+**Sound:** music only. None of the top 5 has captions from speech, and commenters only mention the music ("creepy", "funeral music").
+
+**For Fortune Fates:**
+- Put the news name in the title **and** as card #1 (or the last card, if it's a timeline ending today). Never make viewers wait for the thing the title promised.
+- Use **30–50 cards** with a continuous scroll, not 12–15. Shorter, slower lists don't fit this format.
+- 3–5 seconds per card: 40 cards ≈ 2.5–3.5 minutes. To reach **8+ minutes for mid-roll ads**, make "mega lists" (100+ entries), or add a 1-line voiceover per card at ~8 seconds each.
+- End with a **10–12 second hold** on the last 3 cards and put the end screen there.
+- Never put a spicier claim on the thumbnail than in the video. Their Maradona thumbnail said "drug overdose" but the video card said "heart attack", and the top comment (34 likes) called it clickbait.
+- Add your own value so YouTube doesn't treat it as reused content: a sources list in the description, a short narration line, or a one-line "why it matters" on each card.
 
 ### Step 5: After publishing
 - **Pin a comment:** "Who should be in Part 2? 👇"
 - **If a video beats your channel median by 3× within 72 hours:** make **Part 2 within 7 days**, then an **"UPDATED 2027"** version later. So Sánh Nhanh's jail video got 600k twice this way.
-- Cut **2–3 Shorts** from each video (the top-card reveal) to bring in subscribers. Shorts pay little, so treat them as support only.
+- Cut **2–3 Shorts** from each video (a 20–40 second piece of the scroll) to bring in subscribers. Shorts pay little, so treat them as support only.
 
 ---
 
