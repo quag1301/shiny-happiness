@@ -1,0 +1,272 @@
+[
+ {
+  "file": "1-ceos-fired-then-came-back",
+  "cards": [
+   {
+    "photo": "Steve_Jobs",
+    "name": "Steve Jobs",
+    "why": "Forced out of Apple",
+    "icon": "🍎",
+    "big": "12",
+    "unit": "YEARS AWAY",
+    "badge": "1985 → 1997",
+    "tag": "Apple"
+   },
+   {
+    "photo": "Bob_Iger",
+    "name": "Bob Iger",
+    "why": "Retired, then called back",
+    "icon": "🏰",
+    "big": "~3",
+    "unit": "YEARS AWAY",
+    "badge": "2020 → 2022",
+    "tag": "Disney",
+    "bar": "#1d4ed8"
+   },
+   {
+    "photo": "Sam_Altman",
+    "name": "Sam Altman",
+    "why": "Fired by his own board",
+    "icon": "🤖",
+    "big": "5",
+    "unit": "DAYS AWAY",
+    "badge": "NOV 2023",
+    "tag": "OpenAI",
+    "bar": "#111"
+   },
+   {
+    "photo": "Jensen_Huang",
+    "name": "Jensen Huang",
+    "why": "Resigned amid scandal",
+    "icon": "📈",
+    "big": "11",
+    "unit": "DAYS AWAY",
+    "badge": "NOV 2026",
+    "tag": "Nvidia",
+    "bar": "#4d7c0f",
+    "chip": [
+     "+31%",
+     "#16a34a"
+    ],
+    "hl": true
+   }
+  ]
+ },
+ {
+  "file": "2-ceos-brought-down-by-affairs",
+  "cards": [
+   {
+    "name": "Kiss-Cam CEO",
+    "why": "Caught on Coldplay kiss cam",
+    "icon": "📸",
+    "big": "OUT",
+    "unit": "RESIGNED 2025",
+    "numc": "#d11",
+    "silmark": "?",
+    "badge": "2025",
+    "tag": "Astronomer"
+   },
+   {
+    "photo": "Brian_Krzanich",
+    "name": "Brian Krzanich",
+    "why": "Relationship with employee",
+    "icon": "💔",
+    "big": "OUT",
+    "unit": "RESIGNED 2018",
+    "numc": "#d11",
+    "badge": "2018",
+    "tag": "Intel",
+    "bar": "#1d4ed8"
+   },
+   {
+    "name": "Steve Easterbrook",
+    "why": "Relationship with employee",
+    "icon": "🍟",
+    "big": "OUT",
+    "unit": "PAID BACK $105M",
+    "numc": "#d11",
+    "badge": "2019",
+    "tag": "McDonald's",
+    "bar": "#b91c1c"
+   },
+   {
+    "photo": "Jensen_Huang",
+    "name": "Jensen Huang",
+    "why": "Affair scandal + spy probe",
+    "icon": "🔄",
+    "big": "BACK",
+    "unit": "11 DAYS LATER",
+    "numc": "#16a34a",
+    "badge": "2026",
+    "tag": "Nvidia",
+    "bar": "#4d7c0f",
+    "hl": true
+   }
+  ]
+ },
+ {
+  "file": "3-black-friday-ghosts-bankrupt-stores",
+  "cards": [
+   {
+    "brand": {
+     "text": "SEARS",
+     "bg": "#0b4ea2",
+     "fg": "#fff",
+     "size": 74
+    },
+    "stamp": "BANKRUPT",
+    "name": "Sears",
+    "why": "Once America's #1 retailer",
+    "icon": "🏬",
+    "big": "2018",
+    "unit": "FILED BANKRUPTCY",
+    "bar": "#0b4ea2"
+   },
+   {
+    "brand": {
+     "text": "<span style='color:#e11d48'>TOYS</span><br><span style='color:#2563eb'>\"R\"</span><span style='color:#16a34a'>US</span>",
+     "bg": "#fff7d6",
+     "fg": "#111",
+     "size": 64
+    },
+    "stamp": "BANKRUPT",
+    "name": "Toys\"R\"Us",
+    "why": "Killed by debt + Amazon",
+    "icon": "🧸",
+    "big": "2017",
+    "unit": "FILED BANKRUPTCY",
+    "bar": "#16a34a"
+   },
+   {
+    "brand": {
+     "text": "CIRCUIT<br>CITY",
+     "bg": "#c8102e",
+     "fg": "#fff",
+     "size": 60
+    },
+    "stamp": "CLOSED",
+    "name": "Circuit City",
+    "why": "Electronics giant gone",
+    "icon": "📺",
+    "big": "2008",
+    "unit": "FILED BANKRUPTCY",
+    "bar": "#c8102e"
+   },
+   {
+    "brand": {
+     "text": "BLOCK<br>BUSTER",
+     "bg": "#0a2a7a",
+     "fg": "#ffd400",
+     "size": 64
+    },
+    "name": "Blockbuster",
+    "why": "Peak: ~9,000 stores",
+    "icon": "📼",
+    "big": "1",
+    "unit": "STORE LEFT ON EARTH",
+    "bar": "#0a2a7a",
+    "chip": [
+     "9,000 → 1",
+     "#e01818"
+    ],
+    "hl": true
+   }
+  ]
+ },
+ {
+  "file": "4-biggest-one-day-fortune-swings",
+  "cards": [
+   {
+    "photo": "Larry_Ellison",
+    "name": "Larry Ellison",
+    "why": "Oracle stock surge, 2025",
+    "icon": "🚀",
+    "big": "+$100B",
+    "unit": "IN ONE DAY",
+    "numc": "#16a34a",
+    "tag": "Oracle",
+    "bar": "#b91c1c"
+   },
+   {
+    "photo": "Jensen_Huang",
+    "name": "Jensen Huang",
+    "why": "Reinstated as CEO, 2026",
+    "icon": "📈",
+    "big": "+$34B",
+    "unit": "IN ONE DAY",
+    "numc": "#16a34a",
+    "tag": "Nvidia",
+    "bar": "#4d7c0f"
+   },
+   {
+    "photo": "Mark_Zuckerberg",
+    "name": "Mark Zuckerberg",
+    "why": "Meta stock crash, 2022",
+    "icon": "📉",
+    "big": "−$29B",
+    "unit": "IN ONE DAY",
+    "numc": "#d11",
+    "tag": "Meta",
+    "bar": "#1d4ed8"
+   },
+   {
+    "photo": "Elon_Musk",
+    "name": "Elon Musk",
+    "why": "Tesla + SpaceX sell-off",
+    "icon": "💥",
+    "big": "−$113B",
+    "unit": "IN TWO DAYS",
+    "numc": "#d11",
+    "tag": "Tesla",
+    "bar": "#111",
+    "hl": true
+   }
+  ]
+ },
+ {
+  "file": "5-lottery-winners-who-went-broke",
+  "cards": [
+   {
+    "name": "Jack Whittaker",
+    "why": "Powerball, 2002",
+    "icon": "🎟️",
+    "big": "$315M",
+    "unit": "WON → LOST IT",
+    "badge": "🇺🇸 2002",
+    "bar": "#b45309",
+    "stamp": "BROKE"
+   },
+   {
+    "name": "Bud Post",
+    "why": "PA Lottery, 1988",
+    "icon": "🎟️",
+    "big": "$16M",
+    "unit": "WON → BROKE",
+    "badge": "🇺🇸 1988",
+    "bar": "#b45309",
+    "stamp": "BROKE"
+   },
+   {
+    "name": "Evelyn Adams",
+    "why": "Won the lottery TWICE",
+    "icon": "🎰",
+    "big": "$5.4M",
+    "unit": "WON → BROKE",
+    "badge": "🇺🇸 1985-86",
+    "bar": "#b45309",
+    "stamp": "BROKE"
+   },
+   {
+    "name": "2026 Winner",
+    "why": "Powerball, Aug 2026",
+    "icon": "💰",
+    "big": "$1.4B",
+    "unit": "WON → ???",
+    "silmark": "?",
+    "badge": "🇺🇸 2026",
+    "bar": "#16a34a",
+    "hl": true
+   }
+  ]
+ }
+]
