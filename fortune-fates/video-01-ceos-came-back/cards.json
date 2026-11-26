@@ -1,0 +1,151 @@
+[
+ {"name":"Steve Jobs","co":"APPLE","role":"Co-founder","photo":"Steve_Jobs",
+  "outD":"SEP 1985","outHow":"FORCED OUT","outR":"Stripped of power by his own board",
+  "inD":"1997","inR":"Back when Apple bought his NeXT",
+  "away":"12 YRS","fate":"SAVED IT","tone":"good","note":"Apple became the world's most valuable company (2011)"},
+
+ {"name":"Lee Iacocca","co":"FORD","role":"Ford President","photo":"Lee_Iacocca",
+  "outD":"JUL 1978","outHow":"FIRED","outR":"By Henry Ford II himself",
+  "inD":"NOV 1978","inR":"Hired to run rival Chrysler",
+  "away":"4 MOS","fate":"REVENGE","tone":"good","note":"Repaid Chrysler's $1.2B government loans 7 years early"},
+
+ {"name":"Jamie Dimon","co":"CITIGROUP","role":"President","photo":"Jamie_Dimon",
+  "outD":"NOV 1998","outHow":"FIRED","outR":"By his mentor Sandy Weill",
+  "inD":"MAR 2000","inR":"CEO of Bank One, then JPMorgan",
+  "away":"16 MOS","fate":"BIGGEST BANK","tone":"good","note":"Built JPMorgan into America's largest bank"},
+
+ {"name":"Howard Schultz","co":"STARBUCKS","role":"Chairman & CEO","photo":"Howard_Schultz",
+  "outD":"2000","outHow":"STEPPED DOWN","outR":"Handed over the CEO job",
+  "inD":"JAN 2008","inR":"Returned as the stock sank",
+  "away":"8 YRS","fate":"BACK TWICE","tone":"good","note":"Came back again in 2022. His pick was replaced after 17 months"},
+
+ {"name":"Elon Musk","co":"X.COM / PAYPAL","role":"Co-founder & CEO","photo":"Elon_Musk",
+  "outD":"SEP 2000","outHow":"OUSTED","outR":"Board coup while he flew to his honeymoon",
+  "inD":"2017","inR":"Bought back the X.com domain",
+  "away":"17 YRS","fate":"PLOT TWIST","tone":"twist","note":"Renamed Twitter \"X\" in 2023"},
+
+ {"name":"Kenneth Lay","co":"ENRON","role":"Chairman & CEO","photo":"Kenneth_Lay",
+  "outD":"FEB 2001","outHow":"STEPPED ASIDE","outR":"Gave the CEO job to Jeff Skilling",
+  "inD":"AUG 2001","inR":"Took it back when Skilling quit",
+  "away":"6 MOS","fate":"BANKRUPT","tone":"bad","note":"Enron collapsed 4 months later. Biggest US bankruptcy at the time"},
+
+ {"name":"Larry Page","co":"GOOGLE","role":"Co-founder & CEO","photo":"Larry_Page",
+  "outD":"2001","outHow":"REPLACED","outR":"Investors brought in Eric Schmidt",
+  "inD":"APR 2011","inR":"Back as CEO",
+  "away":"10 YRS","fate":"$1 TRILLION","tone":"good","note":"Created Alphabet. Passed $1 trillion in 2020"},
+
+ {"name":"Charles Schwab","co":"CHARLES SCHWAB","role":"Founder","photo":"Charles_R_Schwab",
+  "outD":"MAY 2003","outHow":"STEPPED BACK","outR":"Gave the CEO job to David Pottruck",
+  "inD":"JUL 2004","inR":"Board ousted Pottruck. Schwab returned",
+  "away":"14 MOS","fate":"TOOK IT BACK","tone":"good","note":"Ran the firm again until 2008"},
+
+ {"name":"Martha Stewart","co":"MARTHA STEWART LIVING","role":"Founder & CEO","photo":"Martha_Stewart",
+  "outD":"JUN 2003","outHow":"RESIGNED","outR":"Indicted. 5 months in prison (2004–05)",
+  "inD":"SEP 2011","inR":"Back on the board. Chairman in 2012",
+  "away":"8 YRS","fate":"SOLD","tone":"neutral","note":"Company sold for $353M in 2015. Once worth ~$2B"},
+
+ {"name":"Michael Dell","co":"DELL","role":"Founder & CEO","photo":"Michael_Dell",
+  "outD":"JUL 2004","outHow":"STEPPED DOWN","outR":"Stayed on as chairman",
+  "inD":"JAN 2007","inR":"Called back as sales slid",
+  "away":"2.5 YRS","fate":"TOOK IT PRIVATE","tone":"good","note":"$24.9B buyout in 2013. Back on the stock market 2018"},
+
+ {"name":"Robert Nardelli","co":"HOME DEPOT","role":"CEO","photo":"Robert_Nardelli",
+  "outD":"JAN 2007","outHow":"FORCED OUT","outR":"Left with a $210M exit package",
+  "inD":"AUG 2007","inR":"Hired as CEO of Chrysler",
+  "away":"7 MOS","fate":"BANKRUPT","tone":"bad","note":"Chrysler filed for bankruptcy in April 2009"},
+
+ {"name":"Lee Kun-hee","co":"SAMSUNG","role":"Chairman","photo":"Lee_Kun-hee",
+  "outD":"APR 2008","outHow":"RESIGNED","outR":"Convicted of tax evasion",
+  "inD":"MAR 2010","inR":"Pardoned. Back as chairman",
+  "away":"2 YRS","fate":"WORLD #1","tone":"good","note":"Samsung became the world's biggest phone maker (2012)"},
+
+ {"name":"Jack Dorsey","co":"TWITTER","role":"Co-founder & CEO","photo":"Jack_Dorsey",
+  "outD":"OCT 2008","outHow":"PUSHED OUT","outR":"Replaced as CEO by Ev Williams",
+  "inD":"2015","inR":"Back as CEO",
+  "away":"7 YRS","fate":"SOLD $44B","tone":"neutral","note":"Quit again in 2021. Musk bought Twitter for $44B"},
+
+ {"name":"A.G. Lafley","co":"PROCTER & GAMBLE","role":"CEO","photo":"A_G_Lafley",
+  "outD":"JUL 2009","outHow":"RETIRED","outR":"Handed over to Bob McDonald",
+  "inD":"MAY 2013","inR":"Recalled after McDonald was pushed out",
+  "away":"4 YRS","fate":"SLIMMED DOWN","tone":"neutral","note":"Sold or cut about 100 brands, then retired again"},
+
+ {"name":"Pat Gelsinger","co":"INTEL","role":"Chief Technology Officer","photo":"Pat_Gelsinger",
+  "outD":"SEP 2009","outHow":"LEFT","outR":"Passed over for the top job",
+  "inD":"FEB 2021","inR":"Returned as CEO",
+  "away":"12 YRS","fate":"OUSTED AGAIN","tone":"bad","note":"Forced out in Dec 2024 as Intel fell behind in AI"},
+
+ {"name":"Mark Hurd","co":"HEWLETT-PACKARD","role":"CEO","photo":"Mark_Hurd",
+  "outD":"AUG 2010","outHow":"RESIGNED","outR":"Expense-report scandal",
+  "inD":"SEP 2010","inR":"Hired by rival Oracle",
+  "away":"1 MO","fate":"HIRED BY RIVAL","tone":"twist","note":"Became Oracle's co-CEO in 2014"},
+
+ {"name":"Mark Pincus","co":"ZYNGA","role":"Founder & CEO","photo":"Mark_Pincus",
+  "outD":"JUL 2013","outHow":"STEPPED DOWN","outR":"Replaced by Xbox chief Don Mattrick",
+  "inD":"APR 2015","inR":"Back as CEO. Stock fell 18%",
+  "away":"21 MOS","fate":"SOLD $12.7B","tone":"good","note":"Take-Two bought Zynga for $12.7B (2022)"},
+
+ {"name":"Brendan Eich","co":"MOZILLA","role":"CEO","photo":"Brendan_Eich",
+  "outD":"APR 2014","outHow":"RESIGNED","outR":"Quit after 11 days amid backlash",
+  "inD":"2015","inR":"Co-founded the Brave browser",
+  "away":"1 YR","fate":"BUILT A RIVAL","tone":"twist","note":"Brave now competes with Firefox"},
+
+ {"name":"Sean Rad","co":"TINDER","role":"Co-founder & CEO","photo":"Sean_Rad",
+  "outD":"NOV 2014","outHow":"DEMOTED","outR":"Removed as CEO after a lawsuit",
+  "inD":"AUG 2015","inR":"Back as CEO",
+  "away":"9 MOS","fate":"$441M PAYDAY","tone":"good","note":"Founders' lawsuit vs Match/IAC settled for $441M"},
+
+ {"name":"Dov Charney","co":"AMERICAN APPAREL","role":"Founder & CEO","photo":"Dov_Charney",
+  "outD":"DEC 2014","outHow":"FIRED","outR":"Fired by the board",
+  "inD":"2016","inR":"Launched rival Los Angeles Apparel",
+  "away":"2 YRS","fate":"BUILT A RIVAL","tone":"twist","note":"American Apparel went bankrupt. Sold for $88M"},
+
+ {"name":"Lee Jae-yong","co":"SAMSUNG","role":"Vice Chairman","photo":"Lee_Jae-yong",
+  "outD":"FEB 2017","outHow":"ARRESTED","outR":"Bribery. Jailed twice",
+  "inD":"AUG 2022","inR":"Pardoned. Chairman by October",
+  "away":"5 YRS","fate":"PARDONED","tone":"twist","note":"Now runs the whole Samsung empire"},
+
+ {"name":"Travis Kalanick","co":"UBER","role":"Co-founder & CEO","photo":"Travis_Kalanick",
+  "outD":"JUN 2017","outHow":"FORCED OUT","outR":"Investors demanded he quit",
+  "inD":"2018","inR":"Took over CloudKitchens",
+  "away":"1 YR","fate":"CASHED OUT","tone":"good","note":"Sold $2.5B+ of Uber stock in 2019"},
+
+ {"name":"Brian Krzanich","co":"INTEL","role":"CEO","photo":"Brian_Krzanich",
+  "outD":"JUN 2018","outHow":"RESIGNED","outR":"Relationship with an employee",
+  "inD":"NOV 2020","inR":"CEO of CDK Global",
+  "away":"2 YRS","fate":"SOLD $8.3B","tone":"good","note":"Brookfield bought CDK for $8.3B (2022)"},
+
+ {"name":"Adam Neumann","co":"WEWORK","role":"Co-founder & CEO","photo":"Adam_Neumann",
+  "outD":"SEP 2019","outHow":"FORCED OUT","outR":"After WeWork's IPO collapsed",
+  "inD":"AUG 2022","inR":"$350M from a16z for his new startup",
+  "away":"3 YRS","fate":"FUNDED AGAIN","tone":"twist","note":"WeWork itself went bankrupt (2023)"},
+
+ {"name":"Bob Iger","co":"DISNEY","role":"CEO","photo":"Bob_Iger",
+  "outD":"FEB 2020","outHow":"STEPPED DOWN","outR":"Picked Bob Chapek to replace him",
+  "inD":"NOV 2022","inR":"Back after the board fired Chapek",
+  "away":"2.8 YRS","fate":"HANDED OFF","tone":"neutral","note":"Gave the job to Josh D'Amaro (March 2026)"},
+
+ {"name":"Trevor Milton","co":"NIKOLA","role":"Founder & CEO","photo":"Trevor_Milton",
+  "outD":"SEP 2020","outHow":"RESIGNED","outR":"Later convicted of fraud",
+  "inD":"MAR 2025","inR":"Pardoned by President Trump",
+  "away":"4.5 YRS","fate":"PARDONED","tone":"twist","note":"Nikola went bankrupt a month earlier"},
+
+ {"name":"Vince McMahon","co":"WWE","role":"Chairman & CEO","photo":"Vince_McMahon",
+  "outD":"JUL 2022","outHow":"RETIRED","outR":"Amid a misconduct investigation",
+  "inD":"JAN 2023","inR":"Used his voting power to return",
+  "away":"6 MOS","fate":"OUT AGAIN","tone":"bad","note":"Merged WWE into $21B TKO, then resigned again (2024)"},
+
+ {"name":"Sam Altman","co":"OPENAI","role":"Co-founder & CEO","photo":"Sam_Altman",
+  "outD":"NOV 17, 2023","outHow":"FIRED","outR":"Board said he wasn't \"candid\"",
+  "inD":"NOV 22, 2023","inR":"Reinstated after a staff revolt",
+  "away":"5 DAYS","fate":"$852B","tone":"good","note":"OpenAI valued at $852 billion (March 2026)"},
+
+ {"name":"Changpeng Zhao","co":"BINANCE","role":"Founder & CEO","photo":"Changpeng_Zhao",
+  "outD":"NOV 2023","outHow":"STEPPED DOWN","outR":"Pleaded guilty. 4 months in prison",
+  "inD":"OCT 2025","inR":"Pardoned by President Trump",
+  "away":"2 YRS","fate":"PARDONED","tone":"twist","note":"The pardon covers him, not Binance"},
+
+ {"name":"Jensen Huang","co":"NVIDIA","role":"Co-founder & CEO","photo":"Jensen_Huang",
+  "outD":"NOV 12, 2026","outHow":"RESIGNED","outR":"Affair reports and a spy probe",
+  "inD":"NOV 23, 2026","inR":"Reinstated by the board",
+  "away":"11 DAYS","fate":"+31% IN A DAY","tone":"good","note":"Nvidia's best day since 2003. Probe still ongoing","last":true}
+]

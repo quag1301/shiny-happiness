@@ -1,0 +1,208 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Anton;src:url(assets/Anton.ttf)}
+@font-face{font-family:Elite;src:url(assets/SpecialElite.ttf)}
+@font-face{font-family:Courier;src:url(assets/CourierPrime.ttf)}
+@font-face{font-family:Courier;font-weight:700;src:url(assets/CourierPrime-Bold.ttf)}
+@font-face{font-family:Marker;src:url(assets/PermanentMarker.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#1d2621}
+#stage{position:absolute;inset:0;background:url(assets/wall.png);overflow:hidden}
+/* ---------- header: Dymo label tape ---------- */
+.dymo{position:absolute;left:70px;top:46px;transform:rotate(-1.3deg);background:linear-gradient(#262626,#0c0c0c 55%,#1a1a1a);
+ padding:12px 26px 10px;border-radius:3px;box-shadow:0 6px 14px rgba(0,0,0,.55);font:700 34px Courier;letter-spacing:7px;color:#f4f4f4;
+ text-shadow:0 1px 0 #fff,0 -1px 0 #666,0 2px 2px rgba(0,0,0,.8)}
+.dymo::before,.dymo::after{content:"";position:absolute;top:0;bottom:0;width:10px;background:inherit}
+.dymo::before{left:-8px;clip-path:polygon(100% 0,0 15%,40% 50%,0 85%,100% 100%)}
+.dymo::after{right:-8px;clip-path:polygon(0 0,100% 15%,60% 50%,100% 85%,0 100%)}
+.dymo.small{top:112px;left:96px;font-size:20px;letter-spacing:5px;padding:7px 18px;transform:rotate(.8deg);background:linear-gradient(#a61b1b,#7d1010 60%,#941616)}
+/* ---------- time clock machine ---------- */
+#clock{position:absolute;left:1340px;top:-6px;width:320px;height:150px;background:linear-gradient(#cdbf9f,#a79874);border-radius:0 0 18px 18px;
+ box-shadow:0 10px 26px rgba(0,0,0,.6),inset 0 -6px 0 rgba(0,0,0,.18),inset 0 2px 0 rgba(255,255,255,.35);z-index:50}
+#clock .brand{position:absolute;top:14px;width:100%;text-align:center;font:700 13px Courier;letter-spacing:5px;color:#4a3f2a}
+#flip{position:absolute;top:36px;left:64px;display:flex;gap:4px}
+.tile{width:38px;height:62px;background:linear-gradient(#2a2a2a 49%,#111 51%);border-radius:5px;color:#f0e8d6;font:52px/62px Anton;text-align:center;
+ box-shadow:inset 0 0 0 2px #000,0 2px 0 rgba(255,255,255,.25);position:relative;overflow:hidden}
+.tile::after{content:"";position:absolute;left:0;right:0;top:30px;height:2px;background:#000}
+#lamp{position:absolute;left:22px;top:52px;width:22px;height:22px;border-radius:50%;background:#5a1410;box-shadow:inset 0 2px 3px rgba(0,0,0,.6)}
+#lamp.on{background:#ff3b2b;box-shadow:0 0 18px 6px rgba(255,60,40,.85),inset 0 -2px 3px rgba(0,0,0,.3)}
+#lampLbl{position:absolute;left:14px;top:78px;font:700 11px Courier;color:#4a3f2a;letter-spacing:2px}
+#tally{position:absolute;right:16px;top:48px;width:58px;text-align:center}
+#tally .n{background:#111;color:#e8d9a8;font:700 22px Courier;padding:3px 0;border-radius:3px;box-shadow:inset 0 0 0 2px #000}
+#tally .l{font:700 10px Courier;color:#4a3f2a;letter-spacing:1px;margin-top:3px}
+#slot{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);width:230px;height:10px;background:#1a140c;border-radius:4px;box-shadow:inset 0 2px 3px #000}
+#hammer{position:absolute;left:1418px;top:118px;width:164px;height:22px;background:linear-gradient(#5b5b5b,#2b2b2b);border-radius:3px;z-index:49;box-shadow:0 4px 8px rgba(0,0,0,.5)}
+/* ---------- rack ---------- */
+#rack{position:absolute;left:0;right:0;top:902px;height:178px;background:url(assets/steel.png);box-shadow:0 -8px 18px rgba(0,0,0,.55);z-index:40}
+#rack::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(#e9edf2,#8c939c)}
+.rivet{position:absolute;top:22px;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#f4f6f8,#7b818a 60%,#3d4248)}
+#rack .lbl{position:absolute;top:56px;font:700 22px Courier;letter-spacing:6px;color:rgba(30,34,40,.55);text-shadow:0 1px 0 rgba(255,255,255,.35)}
+/* ---------- cards ---------- */
+#track{position:absolute;left:0;top:0;width:100%;height:100%}
+.card{position:absolute;top:150px;width:500px;height:820px;margin-left:-250px;background:url(assets/paper.png);background-size:500px 820px;
+ box-shadow:0 18px 30px rgba(0,0,0,.55),0 2px 0 rgba(255,255,255,.4) inset;color:#2b2620;will-change:transform}
+.notch{position:absolute;top:-1px;left:50%;width:56px;height:16px;margin-left:-28px;background:#1d2621;border-radius:0 0 28px 28px;opacity:.85}
+.hdr{position:absolute;top:24px;left:26px;right:26px;display:flex;justify-content:space-between;font:700 14px Courier;letter-spacing:4px;color:#7a2a1f}
+.lab{font:700 11px Courier;letter-spacing:3px;color:#8a7d66}
+.co{position:absolute;top:56px;left:26px;width:262px}
+.co .v{font:44px/1 Anton;color:#2b2620;letter-spacing:.5px;margin-top:4px;text-transform:uppercase}
+.nm{position:absolute;top:168px;left:26px;width:270px}
+.nm .v{font:31px/1.05 Elite;color:#1f1b17;margin-top:4px}
+.nm .r{font:17px Elite;color:#5c5246;margin-top:6px}
+.photo{position:absolute;top:46px;right:22px;width:172px;height:212px;background:#f7f3ea;padding:9px 9px 30px;box-shadow:0 6px 12px rgba(0,0,0,.35);transform:rotate(3.2deg)}
+.photo .img{width:100%;height:100%;background-size:cover;background-position:center 20%;filter:grayscale(1) contrast(1.25) brightness(1.04) sepia(.28)}
+.photo .img::after{content:"";position:absolute;inset:9px 9px 30px;background:radial-gradient(rgba(40,30,20,.35) 0.9px,transparent 1.3px);background-size:4px 4px;mix-blend-mode:multiply}
+.photo .nophoto{width:100%;height:100%;background:#d9d1bf;display:flex;align-items:center;justify-content:center;text-align:center;font:700 15px Courier;color:#7a6f5c;letter-spacing:2px}
+.clip{position:absolute;top:-22px;left:20px;width:30px;height:76px;border:4px solid #8d939b;border-radius:15px;border-bottom-color:#6c727a;z-index:3}
+.clip::after{content:"";position:absolute;left:4px;top:10px;width:14px;height:48px;border:3px solid #a3a9b0;border-radius:9px}
+/* punch grid */
+.grid{position:absolute;top:296px;left:22px;right:22px;border-top:2px solid #6d84a6}
+.grow{display:grid;grid-template-columns:136px 64px 1fr;border-bottom:1.5px solid #9aaac2;min-height:78px;align-items:center}
+.grow.h{min-height:26px;font:700 11px Courier;letter-spacing:2px;color:#6d84a6}
+.grow>div{padding:6px 8px;border-right:1.5px solid #9aaac2;height:100%;display:flex;align-items:center}
+.grow>div:last-child{border-right:0}
+.ink{display:inline-block;font:700 24px Courier;letter-spacing:-.5px;-webkit-mask-image:var(--inkmask);-webkit-mask-size:600px 220px}
+.ink.out{color:#3f3486}.ink.in{color:#b0231b}
+.tag{font:700 17px Courier;border:2.5px solid currentColor;padding:1px 6px;border-radius:3px}
+.rem{font:17px/1.15 Elite;color:#2b2620}
+.how{font:700 12px Courier;letter-spacing:2px;display:block;margin-bottom:3px}
+.out .how,.how.out{color:#3f3486}
+.blankline{display:block;width:100%;border-bottom:1.5px dashed #b5a990;height:20px}
+/* away */
+.away{position:absolute;top:486px;left:26px;right:26px;display:flex;align-items:flex-end;justify-content:space-between}
+.away .v{font:78px/0.9 Anton;color:#1f1b17;letter-spacing:1px}
+.away .q{font:78px/0.9 Anton;color:#c9bea6}
+/* fate */
+.fatebox{position:absolute;top:588px;left:22px;right:22px;height:156px;border:2px dashed #b9ad94;border-radius:6px}
+.fatebox .lab{position:absolute;top:-9px;left:12px;background:#ece3c9;padding:0 6px}
+.stamp{position:absolute;left:50%;top:50px;transform:translate(-50%,-50%) rotate(-6deg);border:6px double currentColor;padding:2px 18px 0;border-radius:8px;
+ font:52px/1.15 Anton;white-space:nowrap;letter-spacing:1.5px;-webkit-mask-image:var(--grunge);-webkit-mask-size:600px 220px;mix-blend-mode:multiply}
+.stamp.good{color:#1f7a3a}.stamp.bad{color:#c21d14}.stamp.twist{color:#1d4f9c}.stamp.neutral{color:#2b2620}
+.note{position:absolute;left:14px;right:14px;bottom:10px;font:17px/1.2 Elite;color:#2b2620;text-align:center}
+.card.last{box-shadow:0 0 0 6px #ffd23a,0 18px 40px rgba(0,0,0,.6)}
+.mk{position:absolute;font:34px Marker;color:#d11a1a;z-index:5;transform:rotate(-8deg)}
+.mkring{position:absolute;border:4px solid #d11a1a;border-radius:50%;z-index:5}
+
+#memo{position:absolute;left:150px;top:215px;width:600px;height:610px;background:#f3efe4;transform:rotate(-2.2deg);box-shadow:0 14px 28px rgba(0,0,0,.5);padding:46px 46px 30px;color:#25211c}
+#memo::before{content:"";position:absolute;top:-10px;left:50%;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ff8a7a,#c0201a 55%,#7a0d09);box-shadow:0 5px 6px rgba(0,0,0,.5)}
+#memo .t{font:700 26px Courier;letter-spacing:6px;border-bottom:3px double #25211c;padding-bottom:10px;margin-bottom:18px}
+#memo .r{font:20px/1.5 Elite;margin:2px 0}
+#memo .r b{font:700 16px Courier;letter-spacing:3px;display:inline-block;width:70px;color:#7a2a1f}
+#memo .body{font:27px/1.45 Elite;margin-top:22px}
+#memo .body .hl{background:linear-gradient(transparent 55%,rgba(255,214,0,.75) 55%)}
+#memo .sig{position:absolute;right:46px;bottom:34px;font:30px Marker;color:#1f3f8a;transform:rotate(-4deg)}
+#cta{position:absolute;left:470px;top:938px;z-index:45;font:60px Marker;color:#ffd23a;transform:rotate(-2deg);text-shadow:0 3px 0 rgba(0,0,0,.45);opacity:0;white-space:nowrap}
+body.thumb .away .v{font-size:100px}
+/* end */
+#endtape{position:absolute;left:70px;top:46px}
+.fade{position:absolute;inset:0;background:#000;pointer-events:none;z-index:99}
+</style></head>
+<body><div id="stage">
+ <div class="dymo" id="tape1">CLOCKED OUT. CLOCKED BACK IN.</div>
+ <div class="dymo small" id="tape2">CEOs WHO CAME BACK · 1978 → 2026</div>
+<div id="memo"><div class="t">INTER-OFFICE MEMO</div>
+  <div class="r"><b>TO:</b>Anyone who says "you can't go back"</div>
+  <div class="r"><b>RE:</b>30 bosses who walked out… and back in</div>
+  <div class="body">Some saved their company.<br>Some <span class="hl">bankrupted</span> it.<br>Four got <span class="hl">pardoned</span>.<br><br>Card No. 30 happened <span class="hl">this month</span>.</div>
+  <div class="sig">— HR</div></div>
+ <div id="track"></div>
+ <div id="hammer"></div>
+ <div id="clock"><div class="brand">TIME RECORDER CO.</div><div id="lamp"></div><div id="lampLbl">IN</div>
+  <div id="flip"><div class="tile">1</div><div class="tile">9</div><div class="tile">8</div><div class="tile">5</div></div>
+  <div id="tally"><div class="n">000</div><div class="l">BACK IN</div></div><div id="slot"></div></div>
+ <div id="rack"></div>
+ <div id="cta">Who did we miss? Comments ↓</div>
+ <div class="fade" id="fade"></div>
+</div>
+<script>
+const P=540, D=4.5, T0=0.9, LINE=1500;           // card pitch, seconds per card, first punch time, punch line x
+let CARDS=[], els=[], tpunch=[], TEND=0;
+function rnd(i,k){const x=Math.sin(i*127.1+k*311.7)*43758.5453;return x-Math.floor(x)}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function yearOf(c){const m=String(c.inD).match(/(\d{4})/);return m?m[1]:'----'}
+function cardHTML(c,i){
+ const ph=c.hasPhoto?`<div class="img" style="background-image:url('photos/${c.photo}.jpg')"></div>`:`<div class="nophoto">NO PHOTO<br>ON FILE</div>`;
+ return `<div class="notch"></div>
+ <div class="hdr"><span>EMPLOYEE TIME CARD</span><span>No. ${String(i+1).padStart(2,'0')}</span></div>
+ <div class="co"><div class="lab">COMPANY</div><div class="v" style="font-size:${c.co.length>14?30:c.co.length>10?36:44}px">${esc(c.co)}</div></div>
+ <div class="nm"><div class="lab">NAME</div><div class="v">${esc(c.name)}</div><div class="r">${esc(c.role)}</div></div>
+ <div class="photo"><div class="clip"></div>${ph}</div>
+ <div class="grid">
+  <div class="grow h"><div>DATE</div><div>PUNCH</div><div>REMARKS</div></div>
+  <div class="grow out"><div><span class="ink out">${esc(c.outD)}</span></div><div><span class="ink out tag">OUT</span></div><div class="rem"><span><span class="how out">${esc(c.outHow)}</span>${esc(c.outR)}</span></div></div>
+  <div class="grow inrow"><div class="inD"><span class="blankline"></span></div><div class="inT"><span class="blankline"></span></div><div class="rem inR"><span class="blankline"></span></div></div>
+ </div>
+ <div class="away"><div><div class="lab">TIME AWAY</div><div class="awayv"><span class="q">? ? ?</span></div></div></div>
+ <div class="fatebox"><span class="lab">FATE</span><div class="stampwrap"></div><div class="note"></div></div>`;
+}
+function setup(cards){
+ CARDS=cards; const tr=document.getElementById('track');
+ cards.forEach((c,i)=>{const d=document.createElement('div');d.className='card'+(c.last?' last':'');d.innerHTML=cardHTML(c,i);tr.appendChild(d);
+  els.push({el:d,state:0,rot:(rnd(i,1)-.5)*2.4,dy:(rnd(i,2)-.5)*12,inD:d.querySelector('.inD'),inT:d.querySelector('.inT'),inR:d.querySelector('.inR'),
+   away:d.querySelector('.awayv'),sw:d.querySelector('.stampwrap'),note:d.querySelector('.note')});tpunch.push(T0+i*D)});
+ const r=document.getElementById('rack');
+ for(let x=40;x<1920;x+=150){const v=document.createElement('div');v.className='rivet';v.style.left=x+'px';r.appendChild(v)}
+ const l=document.createElement('div');l.className='lbl';l.style.left='70px';l.textContent='◄ CLOCKED BACK IN';r.appendChild(l);
+ const l2=document.createElement('div');l2.className='lbl';l2.style.right='60px';l2.textContent='WAITING ►';r.appendChild(l2);
+ TEND=tpunch[tpunch.length-1]+12;
+ return {duration:TEND, punches:tpunch, tones:cards.map(c=>c.tone)};
+}
+function applyState(e,c,s){            // s: 0 none, 1 in-row, 2 away, 3 stamp, 4 note
+ if(s===e.state) return;
+ if(s>=1){e.inD.innerHTML=`<span class="ink in">${esc(c.inD)}</span>`;e.inT.innerHTML=`<span class="ink in tag">IN</span>`;
+   e.inR.innerHTML=`<span><span class="how" style="color:#b0231b">BACK IN</span>${esc(c.inR)}</span>`}
+ else{for(const k of ['inD','inT','inR']) e[k].innerHTML='<span class="blankline"></span>'}
+ e.away.innerHTML = s>=2?`<span class="v">${esc(c.away)}</span>`:`<span class="q">? ? ?</span>`;
+ e.sw.innerHTML = s>=3?`<div class="stamp ${c.tone}" style="font-size:${c.fate.length>12?40:c.fate.length>9?46:54}px">${esc(c.fate)}</div>`:'';
+ e.note.textContent = s>=4?c.note:'';
+ e.state=s;
+}
+function setTiles(str){const t=document.querySelectorAll('.tile');for(let k=0;k<4;k++)t[k].textContent=str[k]}
+function render(t){
+ const last=tpunch.length-1, tl=Math.min(t,tpunch[last]);
+ let cur=-1;
+ els.forEach((e,i)=>{
+  const c=CARDS[i], tp=tpunch[i];
+  let x=LINE+(tp-tl)*(P/D);
+  let y=e.dy, rot=e.rot, sc=1;
+  if(i===0&&t<0.45){const k=t/0.45;y+=-900*(1-k)*(1-k);}              // first card drops into rack
+  const dt=t-tp;
+  if(dt>=0&&dt<0.25){y+=Math.sin(dt/0.25*Math.PI)*10;}                  // punch jolt
+  if(dt>=0.35&&dt<0.6){rot+=Math.sin((dt-0.35)*60)*0.7*(0.6-dt)*4;}     // stamp shake
+  const vis=x>-320&&x<2240; e.el.style.display=vis?'block':'none';
+  if(vis) e.el.style.transform=`translate(${x}px,${y}px) rotate(${rot}deg) scale(${sc})`;
+  let s=0; if(dt>=0)s=1; if(dt>=0.18)s=2; if(dt>=0.38)s=3; if(dt>=0.7)s=4; applyState(e,c,s);
+  const st=e.sw.firstChild;
+  if(st&&dt<0.5){const k=Math.min(1,(dt-0.38)/0.12);st.style.transform=`translate(-50%,-50%) rotate(-6deg) scale(${2.4-1.4*k})`;st.style.opacity=k}
+  else if(st){st.style.transform='translate(-50%,-50%) rotate(-6deg)';st.style.opacity=1}
+  if(dt>=0)cur=i;
+ });
+ const mx=-(tl-T0)*(P/D); const memo=document.getElementById('memo'); memo.style.display=mx<-1000?'none':'block'; memo.style.transform=`translateX(${Math.min(0,mx)}px) rotate(-2.2deg)`;
+ setTiles(cur>=0?yearOf(CARDS[cur]):'----');
+ document.querySelector('#tally .n').textContent=String(cur+1).padStart(3,'0');
+ const near=tpunch.some(tp=>t-tp>=0&&t-tp<0.35);
+ document.getElementById('lamp').className=near?'on':'';
+ const hd=tpunch.reduce((m,tp)=>{const d=t-tp;return (d>=-0.12&&d<0.25)?Math.max(m,d<0?1+d/0.12:1-d/0.25):m},0);
+ document.getElementById('hammer').style.transform=`translateY(${hd*16}px)`;
+ const tc=t-(tpunch[last]+1.6); const cta=document.getElementById('cta'); cta.style.opacity=Math.max(0,Math.min(1,tc/0.4)); cta.style.transform=`rotate(-2deg) scale(${tc>0&&tc<0.4?1.4-tc:1})`;
+ // fades
+ let f=0; if(t<0.25)f=1-t/0.25; if(t>TEND-0.8)f=(t-(TEND-0.8))/0.8;
+ document.getElementById('fade').style.opacity=Math.max(0,Math.min(1,f));
+}
+/* thumbnail mode: three big cards, fully stamped, red-marker notes */
+function thumb(idx){
+ for(const id of ['clock','hammer','rack','tape2','memo','cta','fade']) document.getElementById(id).style.display='none';
+ document.body.classList.add('thumb');
+ const xs=[335,960,1585];
+ els.forEach(e=>{e.el.style.display='none'});
+ idx.forEach((i,k)=>{const e=els[i];applyState(e,CARDS[i],4);e.el.style.display='block';
+  e.el.style.transform=`translate(${xs[k]}px,${-20+e.dy*0.5}px) rotate(${e.rot*1.4}deg) scale(1.25)`;
+  const st=e.sw.firstChild; st.style.opacity=1; st.style.transform='translate(-50%,-50%) rotate(-6deg) scale(1.12)';
+  if(k>0){const r=document.createElement('div');r.className='mkring';r.style.cssText='left:6px;top:500px;width:330px;height:112px;transform:rotate(-3deg)';e.el.appendChild(r);
+   const q=document.createElement('div');q.className='mk';q.style.cssText='left:340px;top:500px;font-size:64px';q.textContent='?!';e.el.appendChild(q)}
+ });
+ const t1=document.getElementById('tape1'); t1.textContent='FIRED → BACK IN';
+ t1.style.cssText='left:50%;top:6px;transform:translateX(-50%) rotate(-1.5deg);font-size:64px;letter-spacing:9px;z-index:60;padding:16px 40px 12px';
+}
+</script></body></html>
